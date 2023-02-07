@@ -1,0 +1,7 @@
+image:
+  repository: ghcr.io/barodeur/hcloud-fip-controller
+  tag: ""
+
+controller:
+  secrets:
+    hcloud_token: ""
