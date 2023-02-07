@@ -5,9 +5,6 @@ on: pull_request
 jobs:
   lint-test:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./deploy
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -43,4 +40,4 @@ jobs:
         if: steps.list-changed.outputs.changed == 'true'
 
       - name: Run chart-testing (install)
-        run: ct install
+        run: ct install --chart-dirs deploy
