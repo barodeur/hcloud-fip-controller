@@ -3,6 +3,6 @@ WORKDIR /usr/src/hcloud-fip-controller
 COPY . .
 RUN cargo install --path .
 
-FROM alpine
+FROM debian:bullseye-slim
 COPY --from=builder /usr/local/cargo/bin/hcloud-fip-controller /usr/local/bin/hcloud-fip-controller
 CMD ["hcloud-fip-controller"]
