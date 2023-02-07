@@ -1,0 +1,4 @@
+apiVersion: v2
+name: hcloud-fip-controller
+version: 0.1.0
+appVersion: v0.1.0
