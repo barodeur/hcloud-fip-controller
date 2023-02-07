@@ -1,0 +1,19 @@
+[package]
+name = "hcloud-fip-controller"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "hcloud-fip-controller"
+path = "src/main.rs"
+
+[dependencies]
+dotenv = { version = "0.15.0" }
+futures = { version = "0.3.26" }
+futures-util = { version = "0.3.26" }
+hcloud = { version = "0.13.0" }
+k8s-openapi = { version = "0.17.0", features = ["v1_26"] }
+kube = { version = "0.78.0", features = ["runtime"] }
+rand = { version = "0.8.5" }
+thiserror = { version = "1.0" }
+tokio = { version = "1.25.0", features = ["full"] }
